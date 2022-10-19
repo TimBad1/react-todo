@@ -6,6 +6,11 @@
   outline: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: border-box;
 }
 
 .todo {
@@ -20,9 +25,38 @@
   &__sidebar {
     width: 200px;
     height: 100%;
-    padding: 60px 20px;
+    padding: 50px 15px;
     background-color: #f4f6f8;
     border-right: 1px solid #f1f1f1;
   }
- 
 }
+.button {
+  background-color: #4dd599;
+  border-radius: 4px;
+  color: #fff;
+  border: 0;
+  padding: 10px 20px;
+  transition: background-color .2s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken($color: #4dd599, $amount: 7%);
+  }
+
+  &:active {
+    background-color: darken($color: #4dd599, $amount: 10%);
+  }
+}
+
+.field {
+  background-color: #fff;
+  border: 1px solid #efefef;
+  border-radius: 4px;
+  padding: 8px 12px;
+  width: 100%;
+
+  &:focus {
+    border-color: #dbdbdb;
+  }
+}
+

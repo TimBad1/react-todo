@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import List from './components/List';
+import AddList from './components/AddList';
 
+import DB from './assets/db.json';
 
 function App() {
+  // const [] = useState()
   return <div className='todo'>
     <div className='todo__sidebar'>
       <List 
@@ -23,12 +26,12 @@ function App() {
               </svg>
             ),
             name: 'Все задачи',
-            active: true,
           },
         ]} 
+        isRemoveble
       />
 
-<List 
+      <List 
         items={[
           {
             color: 'green',
@@ -37,6 +40,7 @@ function App() {
           {
             color: 'blue',
             name: 'Фронтенд',
+            active: true,
           },
           {
             color: 'pink',
@@ -51,7 +55,10 @@ function App() {
             name: 'Личное',
           },
         ]} 
+        isRemoveble
       />
+
+      <AddList colors={DB.colors}/>
     </div>
     <div className='todo__tasks'></div>
   </div>;
