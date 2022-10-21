@@ -14,8 +14,9 @@ html {
 }
 
 .todo {
+  display: flex;
   width: 750px;
-  height: 530px;
+  min-height: 530px;
   margin: 100px auto;
   border: 1px solid #f1f1f1;
   border-radius: 10px;
@@ -24,12 +25,18 @@ html {
 
   &__sidebar {
     width: 200px;
-    height: 100%;
+    
     padding: 50px 15px;
     background-color: #f4f6f8;
     border-right: 1px solid #f1f1f1;
   }
+
+  &__tasks {
+    flex: 1;
+    padding: 60px;
+  }
 }
+
 .button {
   background-color: #4dd599;
   border-radius: 4px;
