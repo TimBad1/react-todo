@@ -34,15 +34,18 @@ html {
   &__tasks {
     flex: 1;
     padding: 60px;
+    position: relative;
   }
 }
 
 .button {
-  background-color: #4dd599;
-  border-radius: 4px;
-  color: #fff;
-  border: 0;
   padding: 10px 20px;
+  border: 0;
+  border-radius: 4px;
+  background-color: #4dd599;
+  color: #fff;
+  font-size: 14px;
+  
   transition: background-color .2s ease-in-out;
   cursor: pointer;
 
@@ -53,15 +56,34 @@ html {
   &:active {
     background-color: darken($color: #4dd599, $amount: 10%);
   }
+
+  &:disabled {
+    background-color: #d8d8d8;
+  }
+}
+
+.add-list__button-grey {
+  background-color: #f4f6f8;
+  color: #444;
+
+  &:hover {
+    background-color: darken($color: #f4f6f8, $amount: 4%);
+  }
+
+  &:active {
+    background-color: darken($color: #f4f6f8, $amount: 7%);
+  }
+
 }
 
 .field {
-  background-color: #fff;
+  width: 100%;
+  padding: 8px 12px;
   border: 1px solid #efefef;
   border-radius: 4px;
-  padding: 8px 12px;
-  width: 100%;
-
+  background-color: #fff;
+  font-size: 14px;
+  
   &:focus {
     border-color: #dbdbdb;
   }

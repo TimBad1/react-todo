@@ -7,25 +7,38 @@
 		color: #64C4ED;
 		padding-bottom: 20px;
 		border-bottom: 1px solid #F2F2F2;
-	}
 
-	&:hover img {
-		opacity: .2;
-	}
+		&:hover img {
+			opacity: .2;
+		}
 
-	img {
-		opacity: 0;
-		transition: opacity .2s ease-in-out;
-		margin-left: 15px;
-		cursor: pointer;
-
-		&:hover {
-			opacity: .7;
+		img {
+			opacity: 0;
+			transition: opacity .2s ease-in-out;
+			margin-left: 15px;
+			cursor: pointer;
+	
+			&:hover {
+				opacity: .7;
+			}
 		}
 	}
 
+	
+
 	&__items {
 		padding: 20px 0;
+
+		h2 {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			font-family: 'Montserrat';
+			font-weight: 700;
+			font-size: 24px;
+			color: #C9D1D3;
+			transform: translate(-50%, -50%);
+		}
 
 		&-row {
 			display: flex;

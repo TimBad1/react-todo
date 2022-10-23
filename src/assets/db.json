@@ -1,6 +1,16 @@
 {
   "lists": [
     {
+      "id": 1,
+      "name": "Покупки",
+      "colorId": 5
+    },
+    {
+      "id": 2,
+      "name": "Фронтенд",
+      "colorId": 4
+    },
+    {
       "id": 3,
       "name": "Фильмы и сериалы",
       "colorId": 3
@@ -9,6 +19,11 @@
       "id": 4,
       "name": "Книги",
       "colorId": 2
+    },
+    {
+      "id": 5,
+      "name": "Личное",
+      "colorId": 1
     },
     {
       "name": "Спорт",
@@ -21,17 +36,36 @@
       "id": 7
     },
     {
-      "name": "123",
-      "colorId": 6,
-      "id": 9
-    },
-    {
-      "name": "1",
+      "name": "ипеавпаыпиачви",
       "colorId": 7,
-      "id": 10
+      "id": 8
     }
   ],
   "tasks": [
+    {
+      "id": 1,
+      "listId": 2,
+      "text": "Изучить JavaScript",
+      "completed": true
+    },
+    {
+      "id": 2,
+      "listId": 2,
+      "text": "Изучить паттерны проектирования",
+      "completed": false
+    },
+    {
+      "id": 3,
+      "listId": 2,
+      "text": "ReactJS Hooks (useState, useReducer, useEffect и т.д.)",
+      "completed": true
+    },
+    {
+      "id": 4,
+      "listId": 2,
+      "text": "Redux (redux-observable, redux-saga)",
+      "completed": false
+    },
     {
       "listId": 4,
       "text": "Купить 1984!",
@@ -55,6 +89,18 @@
       "text": "Сделали удаление и редактирование задач и списков",
       "completed": true,
       "id": 17
+    },
+    {
+      "listId": 2,
+      "text": "трпст",
+      "completed": false,
+      "id": 18
+    },
+    {
+      "listId": 2,
+      "text": "тапрстпв",
+      "completed": false,
+      "id": 19
     }
   ],
   "colors": [
