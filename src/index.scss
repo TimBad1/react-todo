@@ -1,91 +1,86 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', system-ui, -apple-system, 'Open Sans', sans-serif;
   list-style: none;
   outline: none;
+  font-family: 'Roboto', -apple-system, system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  box-sizing: border-box;
-}
-
-html {
-  box-sizing: border-box;
 }
 
 .todo {
   display: flex;
-  width: 750px;
-  min-height: 530px;
-  margin: 100px auto;
-  border: 1px solid #f1f1f1;
-  border-radius: 10px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: calc(100vw - 30px);
+  height: calc(100vh - 100px);
+  transform: translate(-50%, -50%);
   box-shadow: 1px 2px 20px #f3f3f3;
+  border-radius: 10px;
+  border: 1px solid #f1f1f1;
   font-size: 14px;
 
   &__sidebar {
-    width: 200px;
-    
-    padding: 50px 15px;
     background-color: #f4f6f8;
+    width: 200px;
+    height: calc(100% - 120px);
     border-right: 1px solid #f1f1f1;
+    padding: 60px 20px;
   }
 
   &__tasks {
     flex: 1;
     padding: 60px;
-    position: relative;
+    overflow: auto;
   }
 }
 
 .button {
-  padding: 10px 20px;
-  border: 0;
+  background: #4dd599;
   border-radius: 4px;
-  background-color: #4dd599;
   color: #fff;
-  font-size: 14px;
-  
-  transition: background-color .2s ease-in-out;
+  border: 0;
+  padding: 10px 20px;
   cursor: pointer;
+  font-size: 14px;
 
   &:hover {
-    background-color: darken($color: #4dd599, $amount: 7%);
+    background: darken(#4dd599, 6%);
   }
 
   &:active {
-    background-color: darken($color: #4dd599, $amount: 10%);
+    background: darken(#4dd599, 10%);
   }
 
   &:disabled {
-    background-color: #d8d8d8;
-  }
-}
-
-.add-list__button-grey {
-  background-color: #f4f6f8;
-  color: #444;
-
-  &:hover {
-    background-color: darken($color: #f4f6f8, $amount: 4%);
+    background: #d8d8d8;
   }
 
-  &:active {
-    background-color: darken($color: #f4f6f8, $amount: 7%);
-  }
+  &--grey {
+    background: #f4f6f8;
+    color: #444444;
 
+    &:hover {
+      background: darken(#f4f6f8, 3%);
+    }
+
+    &:active {
+      background: darken(#f4f6f8, 6%);
+    }
+  }
 }
 
 .field {
-  width: 100%;
-  padding: 8px 12px;
+  background: #ffffff;
   border: 1px solid #efefef;
+  box-sizing: border-box;
   border-radius: 4px;
-  background-color: #fff;
+  padding: 8px 12px;
+  width: 100%;
   font-size: 14px;
-  
+
   &:focus {
     border-color: #dbdbdb;
   }
 }
-

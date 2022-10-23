@@ -1,76 +1,67 @@
 .list {
-	$self: &;
+  $self: &;
 
-	&:not(:last-child) {
-		margin-bottom: 20px;
-	}
+  margin-bottom: 30px;
 
-	&__add-button {
-		svg, span {
-			opacity: .4;
-			transition: opacity .2s ease-in-out;
-		}
+  &__add-button {
+    opacity: 0.4;
 
-		&:hover {
-			svg, span {
-				opacity: 1;
-			}
-		}
-	}
+    &:hover {
+      opacity: 1;
+    }
+  }
 
-	li {
-		display: flex;
-		align-items: center;
-		padding: 8px 10px;
-		cursor: pointer;
-		transition: background-color .1s ease-in-out;
-		
-		span {
-			flex: 1;
-		}
+  li {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px 12px;
+    transition: background-color 0.15s ease-in-out;
 
-		&:hover {
-			background-color: rgba(255,255,255,.5);
-		}
-		
-		&:hover #{$self}__remove-icon {
-			opacity: .2;
-		}
-	
-		#{$self}__remove-icon {
-			opacity: 0;
-			transition: opacity .2s ease-in-out;
-	
-			&:hover {
-				opacity: .7;
-			}
-		}
+    &:hover #{$self}__remove-icon {
+      opacity: 0.2;
+    }
 
-		&.active {
-			background-color: #fff;
-			box-shadow: 0px 3px 10px rgba(0,0,0,.04);
-			border-radius: 4px;
-		}
-			
-		.badge {
-			position: relative;
-		}
-		
-		i {
-			margin-right: 8px;
-			display: inline-flex;
+    #{$self}__remove-icon {
+      opacity: 0;
+      transition: opacity 0.15s ease-in-out;
 
-			svg {
-				path {
-					fill: #7C7C7C;
-				}
-			}
-		}
+      &:hover {
+        opacity: 0.8;
+      }
+    }
 
-		span {
-			text-overflow: ellipsis;
-			overflow: hidden;
-			white-space: nowrap;
-		}
-	}	
+    span {
+      flex: 1;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      width: 160px;
+      white-space: nowrap;
+    }
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.5);
+    }
+
+    &.active {
+      background: #ffffff;
+      box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.04);
+      border-radius: 4px;
+    }
+
+    .badge {
+      position: relative;
+      left: 5px;
+    }
+
+    i {
+      display: inline-flex;
+      margin-right: 8px;
+      svg {
+        path {
+          fill: #7c7c7c;
+        }
+      }
+    }
+  }
 }
